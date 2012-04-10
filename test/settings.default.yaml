@@ -1,0 +1,16 @@
+data_dir: data
+value_turning_multiple: 10
+tmp_dir: tmp
+complex:
+  - name: hello
+    age: 12
+  - name: world
+    age: 20
+foo:
+  bar: bar
+  baz: baz
+some_dirs:
+  - data/sample
+replace_this_list:
+  - 12
+  - 56

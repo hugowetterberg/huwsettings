@@ -1,0 +1,35 @@
+# Simple attribute replacement
+data_dir: awesome_data
+foo/bar: hello world
+# Add new elements and mix and match flat & nested structure
+arbitrary/number: 56
+arbitrary/text: hello
+arbitrary/complex:
+  some: info
+  about: setting
+# The items in this array will be appended to the default
+# items.
+some_dirs/:
+  - data/sample
+# The value in the default settings file is not an array
+# but will be wrapped in one to allow append.
+value_turning_multiple/:
+  - 20
+  - 5
+# Without a trailing slash the array will be replaced.
+replace_this_list:
+  - 120
+  - 560
+# Appending an object
+complex/:
+  name: hugo
+  age: 30
+# Add the attribute valid to all objects in complex
+complex//valid: you bet
+# Overwrites are possible within one file
+some:
+  conf: foobar
+some/conf: necktie
+obj: 2
+# Add an attribute to all top level elements
+/valid: value

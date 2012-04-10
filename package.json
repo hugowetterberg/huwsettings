@@ -1,0 +1,23 @@
+{
+  "name": "huwsettings",
+  "description": "Simple settings parser",
+  "version": "0.1.0",
+  "author": "Hugo Wetterberg <hugo@tv2.dk>",
+  "dependencies": {
+    "js-yaml": "0.3.5",
+    "coffee-script": ">=1.2.0"
+  },
+  "devDependencies": {
+    "vows": "0.6.2"
+  },
+  "repository": { "type": "git", "url": "git://github.com/hugowetterberg/huwsettings.git" },
+  "keywords": ["settings", "yaml", "overrides"],
+  "main": "index",
+  "scripts": {
+    "test": "./node_modules/.bin/vows --spec --isolate"
+  },
+  "bin": {
+    "huwsettings": "./bin/huwsettings"
+  },
+  "engines": { "node": "> 0.4.11" }
+}
