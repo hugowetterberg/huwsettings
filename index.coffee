@@ -85,12 +85,13 @@ exports.load = (chain, callback)->
             doc = loaded.shift()
 
             exports.extendWithHeader settings, header, doc, buckets
-        if chain.length
-          load chain.shift()
-        else
-          callback null, settings
       catch error
-        callback error
+        return callback error
+
+      if chain.length
+        load chain.shift()
+      else
+        callback null, settings
 
   # If a single file is provided we wrap it in an array
   if not Array.isArray chain
